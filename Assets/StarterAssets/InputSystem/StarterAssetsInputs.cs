@@ -1,7 +1,7 @@
 using UnityEngine;
-#if ENABLE_INPUT_SYSTEM
+//#if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
-#endif
+//#endif
 
 namespace StarterAssets
 {
@@ -12,6 +12,7 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool fire;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -20,7 +21,7 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
-#if ENABLE_INPUT_SYSTEM
+//#if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)
 		{
 			MoveInput(value.Get<Vector2>());
@@ -43,7 +44,14 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
-#endif
+
+		public void OnFire(InputValue value)
+		{
+		    FireInput(value.isPressed);
+		}
+
+
+//#endif
 
 
 		public void MoveInput(Vector2 newMoveDirection)
@@ -64,6 +72,11 @@ namespace StarterAssets
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
+		}
+
+		public void FireInput(bool newFireState)
+		{
+			fire = newFireState;
 		}
 		
 		private void OnApplicationFocus(bool hasFocus)
