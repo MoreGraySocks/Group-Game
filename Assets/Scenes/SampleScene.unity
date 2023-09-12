@@ -247,6 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 365341614}
   - component: {fileID: 365341613}
+  - component: {fileID: 365341615}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -266,6 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 131689779ad36c54194a0202a9b34aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 365341615}
   player: {fileID: 1834913719}
   targets:
   - {fileID: 450356898}
@@ -292,6 +294,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &365341615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365341612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc67da3ac236f88478267bd0ee2df550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScores: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  scoreFileName: highScores.txt
 --- !u!1001 &386259353
 PrefabInstance:
   m_ObjectHideFlags: 0

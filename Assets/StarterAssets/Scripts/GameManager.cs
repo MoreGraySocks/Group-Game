@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    public ScoreManager scoreManager;
+
     public GameObject player;
     public List<GameObject> targets = new List<GameObject>();
     float gameTimer;
@@ -44,6 +47,9 @@ public class GameManager : MonoBehaviour
                     if (gameOver)
                     {
                         gamestate = Gamestate.GameOver;
+
+                        scoreManager.AddScoreToHighScores(seconds);
+                        scoreManager.SaveScoresToFile();
                     }
                     break;
                 }
