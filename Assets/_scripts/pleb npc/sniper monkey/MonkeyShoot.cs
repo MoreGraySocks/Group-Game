@@ -4,8 +4,8 @@ using UnityEngine;
 //Lexan (Xan) Hewett (◑_◑)
 public class MonkeyShoot : MonoBehaviour
 {
-    public Rigidbody m_Bullet;
-    public Transform m_ShootTransform;
+    //public Rigidbody m_Bullet;
+    //public Transform m_ShootTransform;
     public float m_FirePower = 25f;
     public float m_ShootDelay = 2.5f;
     private bool m_CanShoot;
@@ -29,8 +29,8 @@ public class MonkeyShoot : MonoBehaviour
     }
     private void Start()
     {
-        Rigidbody bulletInstance = Instantiate(m_Bullet, m_ShootTransform.position, m_ShootTransform.rotation) as Rigidbody;
-        bulletInstance.velocity = m_FirePower * m_ShootTransform.forward;
+        //Rigidbody bulletInstance = Instantiate(m_Bullet, m_ShootTransform.position, m_ShootTransform.rotation) as Rigidbody;
+        //bulletInstance.velocity = m_FirePower * m_ShootTransform.forward;
     }
     private void OnTriggerEnter(Collider other)
     {
