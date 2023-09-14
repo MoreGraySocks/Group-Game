@@ -23,7 +23,7 @@ public class MonkeyShoot : MonoBehaviour
             if (m_ShootTimer <= 0)
             {
                 m_ShootTimer = m_ShootDelay;
-                Shoot();                         //WHY IS IT NOT WORKIN
+                //Shoot();                         //WHY IS IT NOT WORKIN
             }
         }
     }
