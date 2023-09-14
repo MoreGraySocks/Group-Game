@@ -104,6 +104,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6608959318810666859}
     m_Modifications:
+    - target: {fileID: 3492367159593190493, guid: 848a58fd01bc1a240b16e6eea8706d1b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492367159593190493, guid: 848a58fd01bc1a240b16e6eea8706d1b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6
+      objectReference: {fileID: 0}
     - target: {fileID: 6762779277328943914, guid: 848a58fd01bc1a240b16e6eea8706d1b, type: 3}
       propertyPath: m_Name
       value: tileset2
