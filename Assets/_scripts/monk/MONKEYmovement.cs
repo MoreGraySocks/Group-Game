@@ -7,7 +7,7 @@ public class MONKEYmovement : MonoBehaviour
     public float m_CloseDistance = 10f;          // distance from player 
     public Transform m_Gun;                      // npc yk gun lol
     private GameObject m_Player;                 // self explanitory 
-    private NavMeshAgent m_NavAgent;
+    private UnityEngine.AI.NavMeshAgent m_NavAgent;
     private Rigidbody m_Rigidbody;
     // npc follows player 
  
@@ -16,7 +16,7 @@ public class MONKEYmovement : MonoBehaviour
     private void Awake()
     {
         m_Player = GameObject.FindGameObjectWithTag("Player");
-        m_NavAgent = GetComponent<NavMeshAgent>();
+        m_NavAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         m_Rigidbody = GetComponent<Rigidbody>();
         m_Follow = false;
     }
@@ -63,4 +63,4 @@ public class MONKEYmovement : MonoBehaviour
     }
 }
 
-}
+
