@@ -23,7 +23,7 @@ public class LIZARDhealth : MonoBehaviour
     }
     private void SetHealthUI()
     {
-
+        //helf bar :P
     }
     public void TakeDamage(float amount)
     {

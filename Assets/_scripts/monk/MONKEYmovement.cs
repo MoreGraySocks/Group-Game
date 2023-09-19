@@ -18,34 +18,19 @@ public class MONKEYmovement : MonoBehaviour
         m_Player = GameObject.FindGameObjectWithTag("Player");
         m_NavAgent = GetComponent<NavMeshAgent>();
         m_Rigidbody = GetComponent<Rigidbody>();
-        m_Follow = false;
+        
     }
     private void OnEnable()
     {
-        m_Rigidbody.isKinematic = false;
+        m_Rigidbody.isKinematic = true;
     }
     private void OnDisable()
     {
         m_Rigidbody.isKinematic = true;          // probably change this?? so like add the animation in or have it moving around small area??
     }
-    private void OnTriggerEnter(Collider other)
+   
+    void Update()                                   // someone not tired needs to work out haw to make it, most likely needed with a new script 
     {
-        if (other.tag == "Player")
-        {
-            m_Follow = true;
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            m_Follow = false;
-        }
-    }
-    void Update()
-    {
-        if (m_Follow == false)
-            return;
         float distance = (m_Player.transform.position - transform.position).magnitude;
         if (distance > m_CloseDistance)
         {
