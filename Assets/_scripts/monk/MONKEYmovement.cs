@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 // Lexan (Xan) Hewett T-T
 public class MONKEYmovement : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class MONKEYmovement : MonoBehaviour
     private GameObject m_Player;                 // self explanitory 
     private NavMeshAgent m_NavAgent;
     private Rigidbody m_Rigidbody;
+    private bool m_Follow = false;
     // npc follows player 
  
     void Start()
@@ -18,7 +20,6 @@ public class MONKEYmovement : MonoBehaviour
         m_Player = GameObject.FindGameObjectWithTag("Player");
         m_NavAgent = GetComponent<NavMeshAgent>();
         m_Rigidbody = GetComponent<Rigidbody>();
-        m_Follow = false;
     }
     private void OnEnable()
     {
@@ -63,4 +64,4 @@ public class MONKEYmovement : MonoBehaviour
     }
 }
 
-}
+
