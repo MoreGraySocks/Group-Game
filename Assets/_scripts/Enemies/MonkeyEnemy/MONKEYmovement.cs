@@ -66,7 +66,7 @@ public class MONKEYmovement : MonoBehaviour
         }
         if (m_Gun != null)
         {
-            m_Gun.LookAt(m_Player.transform);    //Milla - this is very broken, gun 'front' is sideways so rig had to be rotated
+            m_Gun.LookAt(m_Player.transform);    //Milla - this is broken, gun 'front' is sideways so rig had to be rotated
         }
     }
 }
