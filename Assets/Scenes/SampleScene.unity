@@ -553,7 +553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 6.11, y: 5.927, z: -0.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -903,7 +903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e8b2226a60b94f4a9c43795c0cea457, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.382
+      value: 2.98
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e8b2226a60b94f4a9c43795c0cea457, type: 3}
       propertyPath: m_LocalPosition.y
@@ -911,7 +911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e8b2226a60b94f4a9c43795c0cea457, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.632
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e8b2226a60b94f4a9c43795c0cea457, type: 3}
       propertyPath: m_LocalRotation.w
@@ -989,8 +989,22 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!136 &1834913730
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834913719}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.6
+  m_Height: 2.2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &1907768760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1135,7 +1149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5503664269838970095, guid: e855096c05db52343854fb52b788b738, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.8801067
+      value: 1.65
       objectReference: {fileID: 0}
     - target: {fileID: 5503664269838970095, guid: e855096c05db52343854fb52b788b738, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1178,6 +1192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MonkeyEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4099576779128701921, guid: 2852c08623551954aa2df2d99d66f141, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4570632596342793218, guid: 2852c08623551954aa2df2d99d66f141, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1192,7 +1210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4570632596342793218, guid: 2852c08623551954aa2df2d99d66f141, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.643
+      value: 1.58
       objectReference: {fileID: 0}
     - target: {fileID: 4570632596342793218, guid: 2852c08623551954aa2df2d99d66f141, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1343,6 +1361,18 @@ PrefabInstance:
     - target: {fileID: 1146331231711568747, guid: 7efbfb8eebe2e7e45adcceb08ed34738, type: 3}
       propertyPath: m_Name
       value: PlayerCapsule
+      objectReference: {fileID: 0}
+    - target: {fileID: 3649187765760964479, guid: 7efbfb8eebe2e7e45adcceb08ed34738, type: 3}
+      propertyPath: m_Height
+      value: 2.02841
+      objectReference: {fileID: 0}
+    - target: {fileID: 3649187765760964479, guid: 7efbfb8eebe2e7e45adcceb08ed34738, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3649187765760964479, guid: 7efbfb8eebe2e7e45adcceb08ed34738, type: 3}
+      propertyPath: m_Center.y
+      value: -0.014204979
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7efbfb8eebe2e7e45adcceb08ed34738, type: 3}
