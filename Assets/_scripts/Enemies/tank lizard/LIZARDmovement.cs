@@ -1,34 +1,39 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-// Lexan (Xan) Hewett T-T
-public class MONKEYmovement : MonoBehaviour
+// XAN (ಥ_ಥ)
+// Edited by Milla
+public class LIZARDmovement : MonoBehaviour
 {
-    public float m_CloseDistance = 10f;          // distance from player 
-    public Transform m_Gun;                      // npc yk gun lol
-    private GameObject m_Player;                 // self explanitory 
-    private UnityEngine.AI.NavMeshAgent m_NavAgent;
+    public float m_CloseDistance = 20f;
+    public Transform m_Turret;
+    private GameObject m_Player;
+    private NavMeshAgent m_NavAgent;
     private Rigidbody m_Rigidbody;
-    private bool m_Follow = false;
-    // npc follows player 
- 
+    private bool m_Follow;
+
     void Start()
     { }
+
     private void Awake()
     {
         m_Player = GameObject.FindGameObjectWithTag("Player");
-        m_NavAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        m_NavAgent = GetComponent<NavMeshAgent>();
         m_Rigidbody = GetComponent<Rigidbody>();
+        m_Follow = false;
     }
+
     private void OnEnable()
     {
         m_Rigidbody.isKinematic = false;
     }
+
     private void OnDisable()
     {
-        m_Rigidbody.isKinematic = true;          // probably change this?? so like add the animation in or have it moving around small area??
+        m_Rigidbody.isKinematic = true;
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -36,6 +41,7 @@ public class MONKEYmovement : MonoBehaviour
             m_Follow = true;
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
@@ -43,10 +49,13 @@ public class MONKEYmovement : MonoBehaviour
             m_Follow = false;
         }
     }
+
     void Update()
     {
+
         if (m_Follow == false)
             return;
+
         float distance = (m_Player.transform.position - transform.position).magnitude;
         if (distance > m_CloseDistance)
         {
@@ -57,11 +66,10 @@ public class MONKEYmovement : MonoBehaviour
         {
             m_NavAgent.isStopped = true;
         }
-        if (m_Gun != null)
+        if (m_Turret != null)
         {
-            m_Gun.LookAt(m_Player.transform);
+            m_Turret.LookAt(m_Player.transform);
         }
     }
+
 }
-
-
