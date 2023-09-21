@@ -1,19 +1,19 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class DeerStab : MonoBehaviour
+// XAN (ㆆ_ㆆ)
+public class LIZARDhealth : MonoBehaviour
 {
-    public float m_StartingHealth = 50f;
+    public float m_StartingHealth = 25f;
     // public GameObject m_ExplosionPrefab;
     private float m_CurrentHealth;
     private bool m_Dead;
     // private ParticleSystem m_ExplosionParticles;
     private void Awake()
     {
-        // m_ExplosionParticles =
-        // Instantiate(m_ExplosionPrefab).GetComponent<ParticleSystem>();
-        // m_ExplosionParticles.gameObject.SetActive(false);
+       // m_ExplosionParticles =
+       // Instantiate(m_ExplosionPrefab).GetComponent<ParticleSystem>();
+       // m_ExplosionParticles.gameObject.SetActive(false);
     }
     private void OnEnable()
     {
@@ -29,7 +29,7 @@ public class DeerStab : MonoBehaviour
     {
         m_CurrentHealth -= amount;
         SetHealthUI();
-        if (m_CurrentHealth <= 0f && !m_Dead) //OH NOOO monki ded :(
+        if (m_CurrentHealth <= 0f && !m_Dead)
         {
             OnDeath();
         }
