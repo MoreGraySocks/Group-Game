@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PLAYERhealth : MonoBehaviour
+public class MuskratHealth : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

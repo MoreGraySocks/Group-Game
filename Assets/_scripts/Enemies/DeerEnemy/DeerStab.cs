@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MONKEYhealth : MonoBehaviour
+public class DeerStab : MonoBehaviour
 {
     public float m_StartingHealth = 50f;
     // public GameObject m_ExplosionPrefab;

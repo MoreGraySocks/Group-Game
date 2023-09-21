@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class HandleProjectile : MonoBehaviour
 {
-    public float projectileLife;
+    public float projectileLife = 2f;
     private float timer;
 
-    public int damage;
+    public int damage = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +20,14 @@ public class HandleProjectile : MonoBehaviour
     {
         timer += Time.deltaTime;
         if(timer >= projectileLife)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
         {
             Destroy(gameObject);
         }
