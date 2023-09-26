@@ -22,6 +22,7 @@ public class PLAYERhealth : MonoBehaviour
         if (collision.gameObject.CompareTag("EnemyProjectile"))
         {
             currentHealth -= collision.gameObject.GetComponent<HandleProjectile>().damage;
+            Debug.Log("player health is " + currentHealth);
             if (currentHealth <= 0)
             {
                 GameOver();
