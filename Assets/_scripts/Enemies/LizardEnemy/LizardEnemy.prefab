@@ -277,6 +277,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ba2103ad1bb0c44a064cd6c9390e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 7715056831122987465, guid: db1c2c74ce1d210469f9e2d64778cf8a, type: 3}
+  fireTransform: {fileID: 6470536360449592643}
+  bulletForce: 30
+  shootDelay: 3
 --- !u!114 &265508539678525955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,5 +653,10 @@ PrefabInstance:
 --- !u!4 &1503103060587200747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5429195186743956814, guid: f89588782d3227046939afe1b9b1c094, type: 3}
+  m_PrefabInstance: {fileID: 6882758092480058789}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6470536360449592643 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 454738825237813478, guid: f89588782d3227046939afe1b9b1c094, type: 3}
   m_PrefabInstance: {fileID: 6882758092480058789}
   m_PrefabAsset: {fileID: 0}
