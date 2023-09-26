@@ -6,13 +6,15 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public PLAYERhealth playerHealthManager;
-    public Image healthBarImage;
+    //naomi
+    public PLAYERhealth playerHealthManager; //get reference to the players health 
+    public Image healthBarImage; //get reference to the image/ui used to indicate players health
 
 
     private void Update()
     {
-        healthBarImage.fillAmount = playerHealthManager.currentHealth / playerHealthManager.maxHealth;
+        Debug.Log(healthBarImage.fillAmount); //everytime update function runs, the fill amount on the player health bar will update and either stay the same or change depending on players current health 
+        healthBarImage.fillAmount = (float) playerHealthManager.currentHealth / (float) playerHealthManager.maxHealth; //(float) 
     }
 
 
