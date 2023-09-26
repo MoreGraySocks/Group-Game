@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class DeerMovement : MonoBehaviour
 {
     public float m_CloseDistance = 2f;
-    public Transform m_Gun;
+    //public Transform m_Gun;
     private GameObject m_Player;
     private NavMeshAgent m_NavAgent;
     private Rigidbody m_Rigidbody;
