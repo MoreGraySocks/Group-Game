@@ -44,7 +44,7 @@ public class LIZARDhealth : MonoBehaviour
     //}
 
     public int maxHealth = 15;
-    private int currentHealth;
+    private int currentHealth; 
 
     void Start()
     {
@@ -56,7 +56,7 @@ public class LIZARDhealth : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private void OnCollisionEnter(Collision collision)
+  private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Projectile"))
         {

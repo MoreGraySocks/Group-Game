@@ -12,9 +12,13 @@ public class TriggerSFX : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        playSound.Play();
-        pauseSound.Stop();
-        TheyJumpedEnding.SetActive(true);
+        if (other.CompareTag("Player"))
+        {
+            playSound.Play();
+            pauseSound.Stop();
+            TheyJumpedEnding.SetActive(true);
+        }
+        
     }
 
 }
