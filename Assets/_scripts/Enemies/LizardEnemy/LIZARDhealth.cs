@@ -44,7 +44,7 @@ public class LIZARDhealth : MonoBehaviour
     //}
 
     public int maxHealth = 15;
-    private int currentHealth; 
+    public int currentHealth; 
 
     void Start()
     {
