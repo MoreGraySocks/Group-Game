@@ -9,6 +9,12 @@ public class TriggerSFX : MonoBehaviour
     public AudioSource playSound;
     public AudioSource pauseSound;
     public GameObject TheyJumpedEnding;
+    public ScoreManager score;
+
+    void Awake()
+    {
+        score = (ScoreManager)FindObjectOfType(typeof(ScoreManager));
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -17,6 +23,8 @@ public class TriggerSFX : MonoBehaviour
             playSound.Play();
             pauseSound.Stop();
             TheyJumpedEnding.SetActive(true);
+            score.AddScoreToHighScores((int) Time.timeSinceLevelLoad);
+            score.SaveScoresToFile();
         }
         
     }

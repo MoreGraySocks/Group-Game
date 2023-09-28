@@ -1210,6 +1210,10 @@ PrefabInstance:
       propertyPath: fireTransform
       value: 
       objectReference: {fileID: 2097197918}
+    - target: {fileID: 265508539678525958, guid: 2ca3a96636c63f84787f40f6d70a4d08, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 298926292147277311, guid: 2ca3a96636c63f84787f40f6d70a4d08, type: 3}
       propertyPath: m_RootOrder
       value: 2
